@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Laporan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title"style="text-align: center;">FORM Laporan Paid Promote EPL 2022</div>
+    <div class="content">
+     <form name="Laporan-Paid-Promote">
+        <div id="form_alerts"></div>
+        <div class="user-details">
+          <div class="input-box">
+            <label for="nama_divisi" class="form-label">Divisi</label>
+            <select type="text" id="slct1" name="nama_divisi" class="form-control" placeholder="Pilih divisi" onchange="populate(this.id,'slct2')" required>
+              <option>--Pilih Divisi--</option>
+              <option value="inti">Inti</option>
+              <option value="actrizen">Actrizen</option>
+              <option value="logtrizen">Logtrizen</option>
+              <option value="spotrizen">Spotrizen</option>
+              <option value="optrizen">Optrizen</option>
+              <option value="sumptrizen">Sumptrizen</option>
+              <option value="prtrizen">Prtrizen</option>
+              <option value="doctrizen">Doctrizen</option>
+            </select>
+            <label for="nama_dan_ig" class="form-label">Nama dan IG</label>
+            <select type="text" id="slct2" name="nama_dan_ig" class="form-control" placeholder="Pilih nama dan ig "required>
+              <option>--Pilih Nama--</option>
+            </select>
+          </div>
+        </div>
+          <div class="input-box">
+            <label for="keterangan_upload" class="form-label">Keterangan</label>
+          <select type="text" id="keterangan_upload" name="keterangan_upload" class="form-control" placeholder="Pilih keterangan "required>
+            <option>--Pilih Keterangan--</option>
+            <option>Tidak Upload PP sama sekali</option>
+            <option>Tidak Sesuai Dengan S&K</option>
+            <option>Tidak Upload Ulang</option>
+            <option>Terlambat</option>
+          </select>
+            <label for="denda" class="form-label">Denda Sebesar</label>
+              <select type="text" id="denda" name="denda" class="form-control" placeholder="Pilih denda "required>
+                <option>--Pilih Nominal Denda--</option>
+                <option>10.000</option>
+                <option>20.000</option>
+                <option>50.000</option>
+              </select>
+              <div class="input-box">
+                <label for="pembayaran" class="form-label">Pembayaran</label>
+                  <select type="text" id="pembayaran" name="pembayaran" class="form-control" placeholder="Pilih pembayaran " required>
+                    <option>--Pilih Pembayaran--</option>
+                    <option>Lunas</option>
+                    <option>Belum</option>
+                  </select>
+        </div>
+        <div class="button">
+          <input type="submit" value="Kirim">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function populate(s1,s2){
+      var s1 = document.getElementById(s1)
+      var s2 = document.getElementById(s2)
+      s2.innerHTML = " ";
+      if(s1.value == "inti"){
+        var optionArray = [" | ","Tarmiji Zulkarnaen Ali(@lionelmiji_) | Tarmiji Zulkarnaen Ali(@lionelmiji_)","Faisal Darma Putra(@iamfaisaldarma_) | Faisal Darma Putra(@iamfaisaldarma_)","Rahma Dania Alem(@daniaaleem_) | Rahma Dania Alem(@daniaaleem_)","Inne Rineko Putri(@innerineko) | Inne Rineko Putri(@innerineko)","Syalita Salsabila Syar'i(@syalitaas) | Syalita Salsabila Syar'i(@syalitaas)","Ananda Ardya Garini(@theloons_) | Ananda Ardya Garini(@theloons_)"]
+      }else if(s1.value == "actrizen"){
+        var optionArray = [" | ","Salman Ala rafli(@salmnar) | Salman Ala rafli(@salmnar)"," Anshar Basyir N(@ansharbasyirns) | Anshar Basyir N(@ansharbasyirns)","Ananda Danis A(@anandadaniss) | Ananda Danis A(@anandadaniss)","Aldy Purnama(@aldypurnamaa_) | Aldy Purnama(@aldypurnamaa_)","Nita Hanifah(@nhanifah13) | Nita Hanifah(@nhanifah13)","Rizky Ardianto(@Ardianto_rizki123) | Rizky Ardianto(@Ardianto_rizki123)","Muhammad Saddam W(@muhammad.dam) | Muhammad Saddam W(@muhammad.dam)","Fadhila Hilda I(@fadhilahilda_) | Fadhila Hilda I(@fadhilahilda_)","Ganjar Tri Arfian(@ganjarta_) | Ganjar Tri Arfian(@ganjarta_)","Figo Ramadhan F.R(@figoramahanfr) | Figo Ramadhan F.R(@figoramahanfr)","Rifki Athaya(@_rifki.athaya) | Rifki Athaya(@_rifki.athaya)"]
+      }else if(s1.value == "logtrizen"){
+        var optionArray = [" | ","Mikhail Sannata Widjaya(@mikehael_) | Mikhail Sannata Widjaya(@mikehael_)","Iqbal Ghinanafsi Wahidan(@wahidaniqbal) | Iqbal Ghinanafsi Wahidan(@wahidaniqbal)","Ahmad Fikri Naufal(@fikrinaufal.22) | Ahmad Fikri Naufal(@fikrinaufal.22)","Harry Freddy Handrian(@harryfreddy_) | Harry Freddy Handrian(@harryfreddy_)","I Made Aji Majesta(@andiimajesta) | I Made Aji Majesta(@andiimajesta)","Luthfi(@luthfiassidqi04) | Luthfi(@luthfiassidqi04)","Arniel Ahmad Rivai(@arniel_ahmad) | Arniel Ahmad Rivai(@arniel_ahmad)","Rafi Farhan Giyandra(@gravifarhan) | Rafi Farhan Giyandra(@gravifarhan)","Kurniawan Aziz (@kurniawan.azis09) | Kurniawan Aziz (@kurniawan.azis09)","Ibnu Yasin Al Faton(@iyafaton) | Ibnu Yasin Al Faton(@iyafaton)","Hadi Marwan Al Munawar(@hadimarwan76) | Hadi Marwan Al Munawar(@hadimarwan76)","Harwin Aptadarya(@harwinapta) | Harwin Aptadarya(@harwinapta)","Muhammad Aflah(@muhammadaflah13) | Muhammad Aflah(@muhammadaflah13)"]
+      }else if(s1.value == "spotrizen"){
+        var optionArray = [" | ","Dennis Perwira Dinata(@dennisdinata) | Dennis Perwira Dinata(@dennisdinata)","Muhammad Nuzul Furqan(@nuzulfurqnn) | Muhammad Nuzul Furqan(@nuzulfurqnn)","Muhammad Dzaky Ananta(@dzaky_ananta16) | Muhammad Dzaky Ananta(@dzaky_ananta16)","Athallah Putra Fajar Prijaka(@athallahptraaa) | Athallah Putra Fajar Prijaka(@athallahptraaa)","Byanca Kinan(@byancakinan) | Byanca Kinan(@byancakinan)","Grace Shandy Yuan Ananda(@grcshndy) | Grace Shandy Yuan Ananda(@grcshndy)","Bagas Tri Swandoko(@bagedotcom) | Bagas Tri Swandoko(@bagedotcom)","Muhammad Rafli Adhitia Azis(@rafliadhitia) | Muhammad Rafli Adhitia Azis(@rafliadhitia)","Babel Widiawan(@ppbbl_) | Babel Widiawan(@ppbbl_)","Aditria Pandu D(@pandudewnt) | Aditria Pandu D(@pandudewnt)"]
+      }else if(s1.value == "optrizen"){
+        var optionArray = [" | ","Rafdi Magiana Ibadurrahman(@rafdito.m.i) | Rafdi Magiana Ibadurrahman(@rafdito.m.i)","Aswin Mikel Komang D(@aswin_mikelkd) | Aswin Mikel Komang D(@aswin_mikelkd)","Saiful Mujab(@mujabb__) | Saiful Mujab(@mujabb__)","Rafsanjani Nurul Irsyad(@rafsaanjani_) | Rafsanjani Nurul Irsyad(@rafsaanjani_)","Fakhri Muhammad Rasyid(@fakhri.m.r) | Fakhri Muhammad Rasyid(@fakhri.m.r)","M Dani Fardiansyah(@dann.oyy) | M Dani Fardiansyah(@dann.oyy)","Fauzan Akbar Y(@ojanomoto) | Fauzan Akbar Y(@ojanomoto)","M Arsyan Alfaridz(@arsyanalfrdz) | M Arsyan Alfaridz(@arsyanalfrdz)","M Naufal Rizal(@Nauflrr_) | M Naufal Rizal(@Nauflrr_)","M Abdul Halim Al Akyas(@al.akyas_02) | M Abdul Halim Al Akyas(@al.akyas_02)","Albert Savero Ginanjar(@abeth_sg) | Albert Savero Ginanjar(@abeth_sg)","Ahimsa Adimulya(@pravum_adi) | Ahimsa Adimulya(@pravum_adi)"]
+      }else if(s1.value == "sumptrizen"){
+        var optionArray = [" | ","Hilmy Fauzan Amin(@hilmyfauzanamin) | Hilmy Fauzan Amin(@hilmyfauzanamin)","Adri Firmansya Sofyan(@ryanadri12) | Adri Firmansya Sofyan(@ryanadri12)","Epideny Nur Rachman(@epdnyrchmn) | Epideny Nur Rachman(@epdnyrchmn)","Azhar Ibrahim(@azhr_i) | Azhar Ibrahim(@azhr_i)","Tsabita Putri Widya(@tsabitapw) | Tsabita Putri Widya(@tsabitapw)","Rezha Aulia(@rezhajajaa) | Rezha Aulia(@rezhajajaa)","Hafizh Alifio Sugiena(@hfzhh.alifiio) | Hafizh Alifio Sugiena(@hfzhh.alifiio)","Muhammad Akmal Falih Rizqullah(@akmal_falih) | Muhammad Akmal Falih Rizqullah(@akmal_falih)","Reza Gustyan Sukmara(@iamrezza__) | Reza Gustyan Sukmara(@iamrezza__)","Alghifari Syarif(@alghif.s) | Alghifari Syarif(@alghif.s)"]
+      }else if(s1.value == "prtrizen"){
+        var optionArray = [" | ","Nabil Samada(@nabilsarmada) | Nabil Samada(@nabilsarmada)","Tania Apriliya Fatimatudzahra(@awta.nya) | Tania Apriliya Fatimatudzahra(@awta.nya)","Diva Auliya Zulkarnaen(@Divazull) | Diva Auliya Zulkarnaen(@Divazull)","Dio Widiantono(@oyon._) | Dio Widiantono(@oyon._)","Annisa Putri(@nsaaputrii) | Annisa Putri(@nsaaputrii)","Tiara Angeliq Oktaviani Dekorte(@tiaradekorte) | Tiara Angeliq Oktaviani Dekorte(@tiaradekorte)","Mochamad Rizky koswara(@rikos69_) | Mochamad Rizky koswara(@rikos69_)","M.Rizqi Nurcahyaddin(@rizqichydn) | M.Rizqi Nurcahyaddin(@rizqichydn)","Alvin Iqbal Sahasfana(@Alviniqb28) | Alvin Iqbal Sahasfana(@Alviniqb28)","Syachrul Gibran Muzhaffar(@syachrulgbrn) | Syachrul Gibran Muzhaffar(@syachrulgbrn)"]
+      }else if(s1.value == "doctrizen"){
+        var optionArray = [" | ","Rangga Vallin Sayoga(@ranggavalls) | Rangga Vallin Sayoga(@ranggavalls)","Auzan Izzaturahman(@zena_trm) | Auzan Izzaturahman(@zena_trm)","Ibnu Hanif Qurrota A'yun(@ibnuhfft) | Ibnu Hanif Qurrota A'yun(@ibnuhfft)","Muhammad Abdul Latif(@latifmhd_) | Muhammad Abdul Latif(@latifmhd_)","Joan Fadly Armanda(@jo_joanfdlii) | Joan Fadly Armanda(@jo_joanfdlii)","I Made Prastha Giriwara(@kijemade) | I Made Prastha Giriwara(@kijemade)","Husni Hamid(@husni_d11) | Husni Hamid(@husni_d11)"]
+      }
+
+      for(var option in optionArray){
+        var pair = optionArray[option].split(" | ");
+        var newOption = document.createElement("option");
+        newOption.value = pair[0];
+        newOption.innerHTML = pair[1];
+        s2.add(newOption);
+      }
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyuVme3yVTmHQxfFpkhVZjK0BQ-UdS1pLPEp2J8ljPIT48IoVxfUuz-RTgmCrgAuN6s/exec'
+        const form = document.forms['Laporan-Paid-Promote']
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => $("#form_alerts").html("<div class='alert alert-success'>Data berhasil dikirim.</div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Data gagal terkirim!.</div>"))
+            form.reset();
+        })
+    </script>
+
+</body>
+</html>
